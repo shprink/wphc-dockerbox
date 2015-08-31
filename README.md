@@ -21,3 +21,13 @@ docker build -t shprink/wphc-dockerbox .
 * To remove all containers: ```docker rm $(docker ps -a -q)```
 * To remove images: ```docker rmi <Container ID>```
 * To remove all images: ```docker rmi $(docker images -a -q)```
+
+## Install WPHC Commands
+
+```
+sh ./install.sh
+npm run installCordova
+
+npm run devserver
+npm run build
+```
