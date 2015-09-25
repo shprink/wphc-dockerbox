@@ -8,6 +8,7 @@ docker run -it -p :8080 shprink/wphc-dockerbox bash
 
 ```
 docker build -t shprink/wphc-dockerbox .
+docker push shprink/wphc-dockerbox
 ```
 
 ## Commands
@@ -25,9 +26,10 @@ docker build -t shprink/wphc-dockerbox .
 ## Install WPHC Commands
 
 ```
-sh ./install.sh
-npm run installCordova
+npm run installWPHC && npm run installCordova
 
 npm run devserver
+npm run dumpdev
+npm run dumpprod
 npm run build
 ```

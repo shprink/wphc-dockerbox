@@ -1,4 +1,4 @@
-FROM webratio/nodejs-with-android-sdk
+FROM node:4.1
 
 MAINTAINER Julien Renaux <contact@julienrenaux.fr>
 RUN mkdir /wphc
@@ -10,8 +10,8 @@ WORKDIR ~
 
 RUN \
 # Install linux packages
-    apt-get update && apt-get install -y --no-install-recommends git python make gcc nano build-essential g++ && \
-    npm install -g node-gyp && \
+    apt-get update && apt-get install -y --no-install-recommends --force-yes expect git wget libc6-i386 lib32stdc++6 lib32gcc1 lib32ncurses5 lib32z1 python curl make gcc nano build-essential g++ && \
+    npm install -g node-gyp npm && \
 # Cleaning linux packages
     apt-get clean && \
     apt-get autoclean && \
